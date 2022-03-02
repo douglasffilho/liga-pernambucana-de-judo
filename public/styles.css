@@ -1,0 +1,71 @@
+@font-face {
+  font-family: LiberationSans;
+  src: url('/fonts/LiberationSans.ttf');
+}
+
+:root {
+  --black: #000000;
+  --ever-black: #000000;
+  --white:  #ffffff;
+
+  --small-container-children: 33%;
+  --normal-container-children: 50%;
+  --large-container-children: 100%;
+}
+
+.dark {
+  --black: #ffffff;
+  --white:  #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: normal;
+  box-sizing: border-box;
+  font-family: LiberationSans, Segoe UI, -apple-system, BlinkMacSystemFont, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  transition-duration: .5s;
+  transition-property: background-color, color, border-color, filter;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  min-width: 100%;
+  grid-template-columns: repeat(auto-fit, var(--normal-container-children));
+}
+
+.container.small {
+  grid-template-columns: repeat(auto-fit, var(--small-container-children));
+}
+
+.container.large {
+  grid-template-columns: repeat(auto-fit, var(--large-container-children));
+}
+
+@media only screen and (max-width: 843px) {
+  .remove-843 {
+    display: none;
+  }
+}

@@ -64,6 +64,6 @@
     "jest-dom": "4.0.0",
     "jest-watch-typeahead": "1.0.0",
     "lint-staged": "12.3.4",
-    "prettier": "2.5.1"
+    "prettier": "2.6.2"
   }
 }
